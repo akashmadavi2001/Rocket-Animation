@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url(bg-a.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.earth img {
+    width: 100px;
+    animation: earth 10s 0s linear infinite;
+}
+
+@keyframes earth {
+    from {
+        transform: rotate(-360deg);
+    }
+}
+
+.rocket {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+ }
+
+.rocket img {
+    position: absolute;
+    width: 100px;
+    top: 100%;
+    left: 100%;
+    animation: rocketpath 5s 0s linear infinite;
+}
+
+@keyframes rocketpath {
+    0% {
+        transform: translate(-1000px, 1000px);
+    }
+
+    50% {
+        transform: translate(-50px, 50px);
+    }
+
+    60% {
+        transform: translate(50px, -50px);
+    }
+
+    100% {
+        transform: translate(1000px, -1000px);
+    }
+}
